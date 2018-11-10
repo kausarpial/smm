@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>SMM.net</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="plugins/fontawesome/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/datetimepicker/datetimepicker.min.css">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container-scroller">
+  
+
+<nav class="navbar horizontal-layout col-lg-12 col-12 p-0">
+  <div class="container d-flex flex-row">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-top">
+      <a class="navbar-brand" href="/">
+        <!-- <img src="https://perfectcdn.com/449c0709-30d5-4529-8d98-a6c1002c7c0d/" alt="logo" title="logo"> -->
+        SMM
+      </a>
+    </div>
+
+    <div class="navbar-menu-wrapper d-flex align-items-center">
+      <ul class="navbar-nav navbar-nav-right ml-auto mr-0">
+      </ul>
+      <button class="navbar-toggler align-self-center" type="button" data-toggle="minimize">
+        <span class="mdi mdi-menu"></span>
+      </button>
+    </div>
+
+  </div>
+  <div class="nav-bottom">
+    <div class="container">
+      <ul class="nav page-navigation" data-navigation>
+        <li class="nav-item ">
+          <a href="index.html" class="nav-link"><i class="link-icon mdi mdi-home"></i><span class="menu-title">HOME</span></a>
+        </li>
+
+        <li class="nav-item ">
+          <a href="services.html" class="nav-link"><i class="link-icon mdi mdi-view-list"></i><span class="menu-title">SERVICES</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a href="api.html" class="nav-link"><i class="link-icon mdi mdi-cube-outline"></i><span class="menu-title">API</span></a>
+        </li>
+
+        <li class="nav-item ">
+          <a href="signup.html" class="nav-link"><i class="link-icon mdi mdi-account-plus"></i><span class="menu-title">SIGN UP</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Main variables *content* -->
+  <div class="container-fluid page-body-wrapper">
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row justify-content-md-center">
+          <div class="col-md-8 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">API Docs</h4>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    HTTP Method
+                    <b>POST</b>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    API URL
+                    <span class="badge badge-primary">https://SMM.net.com/api/v2</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Response format
+                    <b>JSON</b>
+                  </li>
+
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Download Examples</span>
+                    <a href="/example.txt" target="_blank" class="btn btn-sm btn-primary"><i class="mdi mdi-download"></i>.php</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Action: Service list</h5>
+
+                <table class="table table-hover table-sm">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th class="width-40">Parameters</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="badge badge-dark">key</span></td>
+                      <td>Your API key</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-dark">action</span></td>
+                      <td>services</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p class="mt-3"><strong>Example response</strong></p>
+                <pre><code class="language-json">[
+    {
+        "service": 1,
+        "name": "Followers",
+        "type": "Default",
+        "category": "First Category",
+        "rate": "0.90",
+        "min": "50",
+        "max": "10000"
+    },
+    {
+        "service": 2,
+        "name": "Comments",
+        "type": "Custom Comments",
+        "category": "Second Category",
+        "rate": "8",
+        "min": "10",
+        "max": "1500"
+    }
+]</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Action: Add order</h5>
+
+                <form class="form-inline">
+                  <div class="form-group">
+                    <select class="form-control input-sm" id="service_type">
+                      <option value="0">Default</option>
+                      <option value="10">Package</option>
+                      <option value="2">Custom Comments</option>
+                      <option value="4">Mentions Custom List</option>
+                      <option value="7">Mentions User Followers</option>
+                      <option value="15">Comment Likes</option>
+                      <option value="100">Subscriptions</option>
+                    </select>
+                  </div>
+                </form>
+                <div id="type_0" style="display:none;">
+                  <table class="table table-hover table-sm">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th class="width-40">Parameters</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="badge badge-dark">key</span></td>
+                        <td>Your API key</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">action</span></td>
+                        <td>add</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">service</span></td>
+                        <td>Service ID</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">link</span></td>
+                        <td>Link to page</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">quantity</span></td>
+                        <td>Needed quantity</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">runs (optional)</span></td>
+                        <td>Runs to deliver</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">interval (optional)</span></td>
+                        <td>Interval in minutes</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="type_10" style="display:none;">
+                  <table class="table table-hover table-sm">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th class="width-40">Parameters</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="badge badge-dark">key</span></td>
+                        <td>Your API key</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">action</span></td>
+                        <td>add</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">service</span></td>
+                        <td>Service ID</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">link</span></td>
+                        <td>Link to page</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="type_2" style="display:none;">
+                  <table class="table table-hover table-sm">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th class="width-40">Parameters</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="badge badge-dark">key</span></td>
+                        <td>Your API key</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">action</span></td>
+                        <td>add</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">service</span></td>
+                        <td>Service ID</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">link</span></td>
+                        <td>Link to page</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">comments</span></td>
+                        <td>Comments list separated by \r\n or \n</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="type_4" style="display:none;">
+                  <table class="table table-hover table-sm">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th class="width-40">Parameters</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="badge badge-dark">key</span></td>
+                        <td>Your API key</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">action</span></td>
+                        <td>add</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">service</span></td>
+                        <td>Service ID</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">link</span></td>
+                        <td>Link to page</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">usernames</span></td>
+                        <td>Usernames list separated by \r\n or \n</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="type_7" style="display:none;">
+                  <table class="table table-hover table-sm">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th class="width-40">Parameters</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="badge badge-dark">key</span></td>
+                        <td>Your API key</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">action</span></td>
+                        <td>add</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">service</span></td>
+                        <td>Service ID</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">link</span></td>
+                        <td>Link to page</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">quantity</span></td>
+                        <td>Needed quantity</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">username</span></td>
+                        <td>URL to scrape followers from</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="type_100" style="display:none;">
+                  <table class="table table-hover table-sm">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th class="width-40">Parameters</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="badge badge-dark">key</span></td>
+                        <td>Your API key</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">action</span></td>
+                        <td>add</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">service</span></td>
+                        <td>Service ID</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">username</span></td>
+                        <td>Username</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">min</span></td>
+                        <td>Quantity min</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">max</span></td>
+                        <td>Quantity max</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">posts</span></td>
+                        <td>New posts count</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">delay</span></td>
+                        <td>Delay in minutes. Possible values: 0, 5, 10, 15, 30, 60, 90</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="type_15" style="display:none;">
+                  <table class="table table-hover table-sm">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th class="width-40">Parameters</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="badge badge-dark">key</span></td>
+                        <td>Your API key</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">action</span></td>
+                        <td>add</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">service</span></td>
+                        <td>Service ID</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">link</span></td>
+                        <td>Link to page</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">quantity</span></td>
+                        <td>Needed quantity</td>
+                      </tr>
+                      <tr>
+                        <td><span class="badge badge-dark">username</span></td>
+                        <td>Username of the comment owner</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p class="mt-3"><strong>Example response</strong></p>
+                <pre><code class="language-json">{
+    "order": 23501
+}</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Action: Order status</h5>
+
+                <table class="table table-hover table-sm">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th class="width-40">Parameters</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="badge badge-dark">key</span></td>
+                      <td>Your API key</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-dark">action</span></td>
+                      <td>status</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-dark">order</span></td>
+                      <td>Order ID</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p class="mt-3"><strong>Example response</strong></p>
+                <pre><code class="language-json">{
+    "charge": "0.27819",
+    "start_count": "3572",
+    "status": "Partial",
+    "remains": "157",
+    "currency": "USD"
+}</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Action: Multiple orders status</h5>
+
+                <table class="table table-hover table-sm">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th class="width-40">Parameters</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="badge badge-dark">key</span></td>
+                      <td>Your API key</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-dark">action</span></td>
+                      <td>status</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-dark">orders</span></td>
+                      <td>Order IDs separated by comma</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p class="mt-3"><strong>Example response</strong></p>
+                <pre><code class="language-json">{
+    "1": {
+        "charge": "0.27819",
+        "start_count": "3572",
+        "status": "Partial",
+        "remains": "157",
+        "currency": "USD"
+    },
+    "10": {
+        "error": "Incorrect order ID"
+    },
+    "100": {
+        "charge": "1.44219",
+        "start_count": "234",
+        "status": "In progress",
+        "remains": "10",
+        "currency": "USD"
+    }
+}</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Action: User balance</h5>
+
+                <table class="table table-hover table-sm">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th class="width-40">Parameters</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="badge badge-dark">key</span></td>
+                      <td>Your API key</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-dark">action</span></td>
+                      <td>balance</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p class="mt-3"><strong>Example response</strong></p>
+                <pre><code class="language-json">{
+    "balance": "100.84292",
+    "currency": "USD"
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="container-fluid footer">
+    <div class="row py-4 footer-bottom">
+        <div class="col-12 text-center mb-5">
+            <a href="#" class="footer-logo">
+                SMM.NET
+            </a>
+        </div>
+        <div class="col-md-8 mx-auto text-center">
+            <div class="container-fluid clearfix">
+                <div class="row">
+                    <div class="col-md-12">
+                        <b>Our contacts: </b>
+                        <span><a href="skype:ssm.net?call" class="text-primary-theme"><i class="mdi mdi-skype"></i> Skype
+                                :
+                                ssm.net</a></span>
+                        <span><a href="mailto:SMM.net@gmail.com" class="text-primary-theme"><i class="mdi mdi-email"></i>
+                                Email :
+                                SMM.net@gmail.com</a></span>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <span class="d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018 <a href="/"
+                                class="text-primary-theme">SMM.net</a>.
+                            All rights reserved.</span>
+                        <span><a href="/terms.html" class="text-primary-theme">Terms of Service</a> | <a href="/faq.html" class="text-primary-theme">Frequent
+                                Asked Questions</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+  
+<!-- Plugins -->
+<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="plugins/moment/moment.min.js"></script>
+<script type="text/javascript" src="plugins/datetimepicker/datetimepicker.min.js"></script>
+<script type="text/javascript" src="plugins/bootstrap/bootstrap.js"></script>
+<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+<!-- Main Script -->
+<script type="text/javascript" src="js/script.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>SMM.net</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="plugins/fontawesome/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/datetimepicker/datetimepicker.min.css">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container-scroller">
+  
+
+<nav class="navbar horizontal-layout col-lg-12 col-12 p-0">
+  <div class="container d-flex flex-row">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-top">
+      <a class="navbar-brand" href="/">
+        <!-- <img src="https://perfectcdn.com/449c0709-30d5-4529-8d98-a6c1002c7c0d/" alt="logo" title="logo"> -->
+        SMM
+      </a>
+    </div>
+
+    <div class="navbar-menu-wrapper d-flex align-items-center">
+      <ul class="navbar-nav navbar-nav-right ml-auto mr-0">
+      </ul>
+      <button class="navbar-toggler align-self-center" type="button" data-toggle="minimize">
+        <span class="mdi mdi-menu"></span>
+      </button>
+    </div>
+
+  </div>
+  <div class="nav-bottom">
+    <div class="container">
+      <ul class="nav page-navigation" data-navigation>
+        <li class="nav-item ">
+          <a href="index.html" class="nav-link"><i class="link-icon mdi mdi-home"></i><span class="menu-title">HOME</span></a>
+        </li>
+
+        <li class="nav-item ">
+          <a href="services.html" class="nav-link"><i class="link-icon mdi mdi-view-list"></i><span class="menu-title">SERVICES</span></a>
+        </li>
+
+        <li class="nav-item ">
+          <a href="api.html" class="nav-link"><i class="link-icon mdi mdi-cube-outline"></i><span class="menu-title">API</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a href="signup.html" class="nav-link"><i class="link-icon mdi mdi-account-plus"></i><span class="menu-title">SIGN UP</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main variables *content* -->
+<div class="container-fluid page-body-wrapper">
+  <div class="main-panel">
+    <div class="content-wrapper">
+      <div class="row justify-content-md-center">
+        <div class="col-md-8 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"><i class="mdi mdi-account-plus"></i> Register on SMM.net</h4>
+              <p class="card-description">Get started by creating your account, use real details only!</p>
+              <form action="" method="post">
+                <input type="hidden" name="_csrf" value="lcT_0Qaok8eb3dnrPeDh36N2rWhC8GBCEI0fh9MkQ-H8oMmAaMbViq-PiYRMsIK3yUDLWA-gUBtcoFzlmn4Mhw==">
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="mdi mdi-at"></i></span>
+                    </div>
+                    <input type="email" class="form-control" id="email" value="" placeholder="your@email.com" name="RegistrationForm[email]">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="mdi mdi-account"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="username" value="" placeholder="Your username" name="RegistrationForm[login]">
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="form-group col-md-6">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="mdi mdi-account-check"></i></span>
+                      </div>
+                      <input type="text" class="form-control" id="firstname" value="" placeholder="Your First Name"
+                        name="RegistrationForm[first_name]">
+                    </div>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="lastname" value="" placeholder="Your Last Name" name="RegistrationForm[last_name]">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="mdi mdi-skype"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="skype" value="" placeholder="Skype username" name="RegistrationForm[skype]">
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="form-group col-md-6">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="mdi mdi-lock"></i></span>
+                      </div>
+                      <input type="password" class="form-control" id="password" name="RegistrationForm[password]"
+                        placeholder="Secure password">
+                    </div>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <input type="password" class="form-control" id="confirm" name="RegistrationForm[password_again]"
+                      placeholder="Confirm password">
+                  </div>
+                </div>
+                <div class="g-recaptcha form-group" data-sitekey="6LeQyxkUAAAAACZsRNUpGI-5rw7ifdLgP0mUyE4O">
+                </div>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" class="terms-accept-checkbox" name="RegistrationForm[termsofservice]"> I
+                      have read and agreed with <a href="/terms" target="_blank">Terms of Service</a>
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign up</button>
+                <span class="pull-right pull-right-middle">Already have an account? <a href="/auth">Sign in</a></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid footer">
+    <div class="row py-4 footer-bottom">
+        <div class="col-12 text-center mb-5">
+            <a href="#" class="footer-logo">
+                SMM.NET
+            </a>
+        </div>
+        <div class="col-md-8 mx-auto text-center">
+            <div class="container-fluid clearfix">
+                <div class="row">
+                    <div class="col-md-12">
+                        <b>Our contacts: </b>
+                        <span><a href="skype:ssm.net?call" class="text-primary-theme"><i class="mdi mdi-skype"></i> Skype
+                                :
+                                ssm.net</a></span>
+                        <span><a href="mailto:SMM.net@gmail.com" class="text-primary-theme"><i class="mdi mdi-email"></i>
+                                Email :
+                                SMM.net@gmail.com</a></span>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <span class="d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018 <a href="/"
+                                class="text-primary-theme">SMM.net</a>.
+                            All rights reserved.</span>
+                        <span><a href="/terms.html" class="text-primary-theme">Terms of Service</a> | <a href="/faq.html" class="text-primary-theme">Frequent
+                                Asked Questions</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Plugins -->
+<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="plugins/moment/moment.min.js"></script>
+<script type="text/javascript" src="plugins/datetimepicker/datetimepicker.min.js"></script>
+<script type="text/javascript" src="plugins/bootstrap/bootstrap.js"></script>
+<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+<!-- Main Script -->
+<script type="text/javascript" src="js/script.js"></script>
+</div>
+</body>
+</html>
