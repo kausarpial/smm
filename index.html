@@ -11,7 +11,9 @@
   <link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="plugins/fontawesome/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="plugins/datetimepicker/datetimepicker.min.css">
-  <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css">
+  <!-- <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css"> -->
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -20,104 +22,80 @@
   <div class="container-scroller">
   
   
-<nav class="navbar horizontal-layout col-lg-12 col-12 p-0">
-  <div class="container d-flex flex-row">
-    <div class="text-center navbar-brand-wrapper d-flex align-items-top">
-      <a class="navbar-brand" href="/">
-        <!-- <img src="https://perfectcdn.com/449c0709-30d5-4529-8d98-a6c1002c7c0d/" alt="logo" title="logo"> -->
-        SMM
-      </a>
-    </div>
-
-    <div class="navbar-menu-wrapper d-flex align-items-center">
-      <ul class="navbar-nav navbar-nav-right ml-auto mr-0">
-      </ul>
-      <button class="navbar-toggler align-self-center" type="button" data-toggle="minimize">
-        <span class="mdi mdi-menu"></span>
-      </button>
-    </div>
-
-  </div>
-  <div class="nav-bottom">
-    <div class="container">
-      <ul class="nav page-navigation" data-navigation>
-        <li class="nav-item active">
-          <a href="index.html" class="nav-link"><i class="link-icon mdi mdi-home"></i><span class="menu-title">HOME</span></a>
+<!-- Navbar Start -->
+<nav class="main-nav navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <!-- <img src="images/logo.png" alt="logo"> -->
+      SMM.net
+    </a>
+    <!-- Toogle Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+      <span class="ti-menu">
+      </span>
+    </button>
+    <div class="collapse navbar-collapse nav-list" id="mainNav">
+      <!-- Navigation Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
         </li>
-
-        <li class="nav-item ">
-          <a href="services.html" class="nav-link"><i class="link-icon mdi mdi-view-list"></i><span class="menu-title">SERVICES</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Service</a>
         </li>
-
-        <li class="nav-item ">
-          <a href="api.html" class="nav-link"><i class="link-icon mdi mdi-cube-outline"></i><span class="menu-title">API</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="api.html">API</a>
         </li>
-
-        <li class="nav-item ">
-          <a href="signup.html" class="nav-link"><i class="link-icon mdi mdi-account-plus"></i><span class="menu-title">SIGN UP</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="signup.html">Sign Up</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<!-- Navbar End -->
 
 <section class="banner">
-    <div class="container-fluid top-banner" style="background: url('http://buyrealfollowerz.com/images/slider-alt.png'); background-size: auto auto;background-size: cover;">
+    <div class="container top-banner">
         <div class="row top-banner-content">
-            <div class="col-md-9 mx-auto">
+            <div class="col-md-12">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <h1 class="text-white banner-title mb-3">Welcome to SMM</h1>
-                        <p class="text-white mb-4">
-                            Get hundreds of High Quality Social Media Services in a distance of a
-                            click.
-                            SMM.net is a SMM Panel with more then 5 year on the market and more then 40 million
-                            orders
-                            processed successfully!
-                        </p>
-                        <div class="mt-2 row">
-                            <div class="col-md-12">
-                                <form method="post" action="#">
-                                    <div class="form-group mb-0 row">
-                                        <div class="col-md-12 mb-3">
-                                            <input type="text" class="form-control form-control-transparent" id="username"
-                                                placeholder="Username" name="username">
-                                        </div>
-                                        <div class="col-md-12 mb-3">
-                                            <div class="input-group">
-                                                <input type="password" class="form-control form-control-transparent" id="password"
-                                                    placeholder="Password" name="LoginForm[password]">
-                                                <span class="input-group-append">
-                                                    <button class="btn btn-sm btn-default"
-                                                        type="button">Forgot?
-                                                    </button>
-                                                </span>
+                        <div class="banner-content">
+                            <h1 class="text-white banner-title mb-3">Welcome to SMM</h1>
+                            <p class="text-white mb-4">
+                                Get hundreds of High Quality Social Media Services in a distance of a
+                                click. SMM.net is a SMM Panel with more then 5 year on the market and more then 40 million orders processed successfully!
+                            </p>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <form method="post" action="#">
+                                        <div class="form-group mb-0 row">
+                                            <div class="col-md-12 mb-3">
+                                                <input type="text" class="form-control form-control-transparent" id="username"
+                                                    placeholder="Username" name="username">
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="input-group">
+                                                    <input type="password" class="form-control form-control-transparent" id="password"
+                                                        placeholder="Password" name="LoginForm[password]">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group mb-0 row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox hidden">
-                                                <label><input type="checkbox" class="hidden" name="LoginForm[remember]"
-                                                        value="1" id="remember">Remember
-                                                    me</label>
+                                        <a href="forget-password.html" class="d-inline-block text-white mb-2">Forget Password</a>
+                                        <div class="form-group mb-0 row">
+                                            <div class="col-md-12">
+                                                <button type="submit" class="btn btn-light btn-block"><i class="fa fa-sign-in"></i>
+                                                    Sign in</button>
                                             </div>
-                                            <button type="submit" class="btn btn-light"><i class="mdi mdi-login"></i>
-                                                Sign in</button>
-                                            <span class="text-white ml-2" style="font-size:12px;">
-                                                <a href="/signup.html"
-                                                    class="text-white">Dont
-                                                    have an account? <b>Sign up</b>
-                                                </a>
-                                            </span>
                                         </div>
-                                    </div>
-                                </form>
+                                            
+                                        <a href="signup.html" class="d-inline-block text-white my-2">Don't have an account? Sign Up</a>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="http://buyrealfollowerz.com/images/promo.png" class="img-fluid floating" alt="Buy Instagram Likes, Followers">
                     </div>
                 </div>
             </div>
@@ -126,7 +104,7 @@
 </section>
 
 <section class="social-box section">
-    <div class="container bg-white pb-0" id="social-boxes">
+    <div class="container" id="social-boxes">
         <div class="row">
             <div class="col-md-12 text-center px-5">
                 <h2 class="h1 nice-title mb-3">The <span>#1</span> and ONLY <span>SMM Panel</span> that you will need!</h2>
@@ -150,7 +128,7 @@
                                     matter if you are
                                     an agency or you just wanna make your friends jealous!
                                 </p>
-                                <a href="/services.html" class="btn btn-outline-primary btn-rounded">View Services</a>
+                                <a href="/services.html" class="btn btn-outline-primary">View Services</a>
                             </div>
                         </div>
                     </div>
@@ -168,7 +146,7 @@
                                     own. Take
                                     your Instagram marketing into the next level with SMM.net
                                 </p>
-                                <a href="/services.html" class="btn btn-outline-primary btn-rounded">View Services</a>
+                                <a href="/services.html" class="btn btn-outline-primary">View Services</a>
                             </div>
                         </div>
                     </div>
@@ -187,7 +165,7 @@
                                     Favorites or
                                     even raise your visibility with High Quality Twitter Followers.
                                 </p>
-                                <a href="/services.html" class="btn btn-outline-primary btn-rounded">View Services</a>
+                                <a href="/services.html" class="btn btn-outline-primary">View Services</a>
                             </div>
                         </div>
                     </div>
@@ -206,7 +184,7 @@
                                     looking for a
                                     country specific Youtube views? We got you covered! Get also Youtube Likes & Dislikes.
                                 </p>
-                                <a href="/services.html" class="btn btn-outline-primary btn-rounded">View Services</a>
+                                <a href="/services.html" class="btn btn-outline-primary">View Services</a>
                             </div>
                         </div>
                     </div>
@@ -226,7 +204,7 @@
                                     DJS, Music
                                     Agencies! Lead the Music Business with our services.
                                 </p>
-                                <a href="/services.html" class="btn btn-outline-primary btn-rounded">View Services</a>
+                                <a href="/services.html" class="btn btn-outline-primary">View Services</a>
                             </div>
                         </div>
                     </div>
@@ -245,7 +223,7 @@
                                     response. Our
                                     costumers are our main priority! <a href="/signup.html">Join SMM.net</a> today!
                                 </p>
-                                <a href="mailto:SMM.net@gmail.com" class="btn btn-outline-primary btn-rounded">Ask for service</a>
+                                <a href="mailto:SMM.net@gmail.com" class="btn btn-outline-primary">Ask for service</a>
                             </div>
                         </div>
                     </div>
@@ -254,8 +232,8 @@
         </div>
         <div class="row mt-5">
             <div class="col-md-12 text-center">
-                <a href="#why-us" class="btn btn-primary btn-rounded btn-fw goto">
-                    <i class="mdi mdi-arrow-down"></i>
+                <a href="#why-us" class="btn btn-primary-gradient page-scroll">
+                    <i class="fa fa-arrow-down"></i>
                     Why SMM.net
                 </a>
             </div>
@@ -263,7 +241,7 @@
     </div>
 </section>
 
-<section class="why-us social-box pt-0" id="why-us" style="background-image: url('http://buyrealfollowerz.com/images/section-bg.png'); background-size:cover;">
+<section class="why-us social-box pt-0" id="why-us" style="background-image: url('images/why-choose-bg.svg'); background-size:cover;">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -275,12 +253,12 @@
                     be a tedious job! Check why you should trust SMM.net to delivery your social media services with a quick comparision.
                 </p>
             </div>
-            <div class="col-md-10 mx-auto">
+            <div class="col-md-12 mx-auto">
                 <div class="row">
                     <div class="col-md-6 grid-margin stretch-card">
                         <div class="card card-icon-top comparision">
                             <div class="comparision-us p-3">
-                                <h2><i class="fa mdi mdi-check-circle-outline"></i> SMM.net</h2>
+                                <h2><i class="fa fa-check-circle-o"></i> SMM.net</h2>
                             </div>
                             <div class="card-body p-2">
                                 <p>
@@ -303,7 +281,7 @@
                     <div class="col-md-6 grid-margin stretch-card">
                         <div class="card card-icon-top comparision comparision_negative">
                             <div class="comparision-others p-3">
-                                <h2 class="nice-title"><i class="fa mdi mdi-close-circle-outline"></i> Others</h2>
+                                <h2 class="nice-title"><i class="fa fa-5x fa-times-circle-o" style="font-size: 25px;"></i> Others</h2>
                             </div>
                             <div class="card-body pt-2">
                                 <p>1. Low quality services that never work or work really
@@ -327,8 +305,8 @@
         </div>
         <div class="row mt-3">
             <div class="col-md-12 text-center">
-                <a href="#safe" class="btn btn-primary btn-rounded">
-                    <i class="mdi mdi-arrow-down"></i>
+                <a href="#safe" class="btn btn-primary-gradient page-scroll">
+                    <i class="fa fa-arrow-down"></i>
                     Trust and Security
                 </a>
             </div>
@@ -351,8 +329,11 @@
                     </div>
                 </div>
     
-                <div class="row align-items-center">
-                    <div class="col-md-6 mr-auto">
+                <div class="row align-items-center py-5">
+                    <div class="col-md-7">
+                        <img src="images/safe-1.svg" class="img-fluid floating-left-right" alt="safe-image">
+                    </div>
+                    <div class="col-md-5">
                         <h2 class="mb-3">
                             <span>Protecting</span> your Payments and
                             Purchases
@@ -368,17 +349,9 @@
                             Bitcoin, Payoneer & Many more!
                         </p>
                     </div>
-                    <div class="col-md-5">
-                        <img src="http://buyrealfollowerz.com/images/safe-payment.png" class="img-fluid floating-left-right"
-                            alt="Secure SMM Panel">
-                    </div>
                 </div>
-                <div class="row align-items-center">
-                    <div class="col-md-5 order-2 order-sm-1">
-                        <img src="http://buyrealfollowerz.com/images/safe-delivery.png" class="img-fluid floating-left-right-alt mr-2"
-                            alt="Secure SMM Panel">
-                    </div>
-                    <div class="col-md-6 order-1 ml-auto">
+                <div class="row align-items-center py-5">
+                    <div class="col-md-6 order-1 mr-auto">
                         <h2 class="mb-3">Delivering <span>Fast</span> and the right
                             way!
                         </h2>
@@ -393,13 +366,16 @@
                             Bitcoin, Payoneer & Many more!
                         </p>
                     </div>
+                    <div class="col-md-6 order-2 order-sm-1">
+                        <img src="images/safe-2.svg" class="img-fluid floating-left-right-alt mr-2" alt="Secure SMM Panel">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-md-12 text-center">
-                <a href="#reviews" class="btn btn-primary btn-rounded btn-fw goto">
-                    <i class="mdi mdi-arrow-down"></i>
+                <a href="#reviews" class="btn btn-primary-gradient page-scroll">
+                    <i class="fa fa-arrow-down"></i>
                     Our costumers
                 </a>
             </div>
@@ -420,7 +396,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
+                <div class="card testimonial-item">
                     <div class="card-body">
                         <img src="http://buyrealfollowerz.com/images/person1.png" class="review-picture rounded-circle mb-2">
                         <h4 class="card-title mb-2">Michelle Hawkins</h4>
@@ -438,7 +414,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
+                <div class="card testimonial-item">
                     <div class="card-body">
                         <img src="http://buyrealfollowerz.com/images/person2.png" class="review-picture rounded-circle mb-2">
                         <h4 class="card-title mb-2">Peter Brown</h4>
@@ -456,7 +432,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
+                <div class="card testimonial-item">
                     <div class="card-body">
                         <img src="http://buyrealfollowerz.com/images/person3.png" class="review-picture rounded-circle mb-2">
                         <h4 class="card-title mb-2">Carl Joe</h4>
@@ -500,7 +476,7 @@
                         <span class="d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018 <a href="/"
                                 class="text-primary-theme">SMM.net</a>.
                             All rights reserved.</span>
-                        <span><a href="/terms.html" class="text-primary-theme">Terms of Service</a> | <a href="/faq.html" class="text-primary-theme">Frequent
+                        <span><a href="terms-conditions.html" class="text-primary-theme">Terms of Service</a> | <a href="faq.html" class="text-primary-theme">Frequent
                                 Asked Questions</a></span>
                     </div>
                 </div>
@@ -514,6 +490,10 @@
 <script type="text/javascript" src="plugins/moment/moment.min.js"></script>
 <script type="text/javascript" src="plugins/datetimepicker/datetimepicker.min.js"></script>
 <script type="text/javascript" src="plugins/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="plugins/smooth-scroll/smooth-scroll.js"></script>
+<script type="text/javascript" src="plugins/headroom/headroom.js"></script>
+<script type="text/javascript" src="plugins/aos/aos.js"></script>
+<script type="text/javascript" src="plugins/match-height/match-height.js"></script>
 <script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
 <!-- Main Script -->
 <script type="text/javascript" src="js/script.js"></script>

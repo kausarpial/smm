@@ -10635,8 +10635,7 @@ body {
 .tt-query:focus,
 .typeahead,
 .typeahead:focus {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none
+    box-shadow: none;
 }
 
 .asColorPicker-input,
@@ -10647,8 +10646,7 @@ body {
 .tt-hint,
 .tt-query,
 .typeahead {
-    -webkit-box-shadow: none;
-    box-shadow: none
+    box-shadow: none;
 }
 
 .asColorPicker-input:focus,
@@ -11125,13 +11123,6 @@ html {
 :-webkit-full-screen,
 :fullscreen:-ms-fullscreen {
     overflow: auto
-}
-
-.page-body-wrapper {
-    min-height: calc(100vh - 70px);
-    background: #eff3f5;
-    padding-left: 0;
-    padding-right: 0
 }
 
 .page-body-wrapper.full-page-wrapper {
@@ -18449,7 +18440,7 @@ body.avgrund-active {
     border-radius: 100%;
     display: block;
     margin: auto;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     position: absolute;
     top: 1px;
     z-index: -1;
@@ -18474,7 +18465,7 @@ body.avgrund-active {
     border-radius: 100%;
     display: block;
     margin: auto;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     position: absolute;
     top: 1px;
     z-index: -1;
@@ -19533,35 +19524,6 @@ div.tagsinput span.tag a {
 }
 
 
-
-.form-control-transparent {
-    background-color: transparent!important;
-    font-size: 1rem;
-    font-weight: 700
-}
-
-.form-control-transparent,
-.form-control-transparent:focus {
-    border: 2px solid #fff;
-    border-radius: 6px;
-    color: #fff
-}
-
-.form-control-transparent::-webkit-input-placeholder {
-    color: #fff
-}
-
-.form-control-transparent::-moz-placeholder {
-    color: #fff
-}
-
-.form-control-transparent:-ms-input-placeholder {
-    color: #fff
-}
-
-.form-control-transparent:-moz-placeholder {
-    color: #fff
-}
 
 .floating {
     -webkit-animation-name: floating;
