@@ -12258,6 +12258,14 @@ h6 span {
   display: inline-block;
 }
 
+.border-right {
+  border-right: 1px solid #dedede;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dedede;
+}
+
 .main-nav {
   padding: 25px 30px;
   transition: .3s ease .02s;
@@ -15522,20 +15530,6 @@ h6 span {
   border: none;
 }
 
-.social-box .card.card-icon-top {
-  text-align: center;
-}
-
-.social-box .card.card-icon-top .card-body {
-  padding: 3rem;
-}
-
-.social-box .card.card-icon-top .card-body .card-icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 2rem;
-}
-
 .social-box.card-item-preview {
   position: relative;
 }
@@ -15557,6 +15551,23 @@ h6 span {
   border-top-right-radius: 10px;
 }
 
+.social-box-item {
+  text-align: left;
+  box-shadow: none;
+  display: flex;
+  align-self: center;
+}
+
+.social-box-item .box-body {
+  padding: 40px 30px;
+}
+
+.social-box-item .box-body .card-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 2rem;
+}
+
 .comparision p {
   margin-bottom: .5rem;
   margin-top: .5rem;
@@ -15572,7 +15583,7 @@ h6 span {
 }
 
 .comparision-us {
-  background: #5A95FF;
+  background: #2370fb;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   color: #fff;
@@ -15613,10 +15624,21 @@ h6 span {
   height: 60px;
 }
 
+.footer {
+  padding: 240px 0 70px;
+  transition: all .25s ease;
+  background: url("../images/footer-bg.svg");
+  background-size: cover;
+}
+
 .footer .footer-logo {
   font-size: 40px;
   color: #5A95FF;
   font-weight: 600;
+}
+
+.footer a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

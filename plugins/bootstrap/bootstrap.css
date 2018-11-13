@@ -11207,30 +11207,6 @@ pre {
     opacity: 1
 }
 
-.footer {
-    background: #eff3f5;
-    padding: 20px 1rem;
-    transition: all .25s ease;
-    -moz-transition: all .25s ease;
-    -webkit-transition: all .25s ease;
-    -ms-transition: all .25s ease;
-    border-top: 1px solid #d5dcec;
-    font-size: 0.75rem;
-    font-family: Open Sans, sans-serif
-}
-
-.footer a {
-    color: #4cceac;
-    font-size: inherit
-}
-
-@media (max-width:991px) {
-    .footer {
-        margin-left: 0;
-        width: 100%
-    }
-}
-
 .rtl {
     direction: rtl;
     text-align: right
