@@ -11142,7 +11142,6 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-right {
 }
 
 .swal2-container {
-  display: box;
   display: flex;
   position: fixed;
   top: 0;
@@ -11234,7 +11233,6 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-right {
 
 .swal2-container.swal2-grow-fullscreen > .swal2-modal,
 .swal2-container.swal2-grow-row > .swal2-modal {
-  display: box !important;
   display: flex !important;
   box-flex: 1;
   box-pack: center;
@@ -11283,7 +11281,6 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-right {
 }
 
 .swal2-container.swal2-grow-column > .swal2-modal {
-  display: box !important;
   display: flex !important;
   box-flex: 1;
   flex: 1;
@@ -11339,7 +11336,6 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-right {
 }
 
 .swal2-popup .swal2-header {
-  display: box;
   display: flex;
   box-orient: vertical;
   box-direction: normal;
@@ -12264,6 +12260,27 @@ h6 span {
 
 .border-bottom {
   border-bottom: 1px solid #dedede;
+}
+
+.service-dropdown .dropdown-item {
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.service-list .btn-info {
+  background: transparent;
+  border: 1px solid #5A95FF;
+  font-weight: normal;
+}
+
+.badge-success {
+  background-color: #46ce6e;
+  font-weight: normal;
+}
+
+.badge-warning {
+  background-color: #ff5e54;
+  font-weight: normal;
 }
 
 .main-nav {
